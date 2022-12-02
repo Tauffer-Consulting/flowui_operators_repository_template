@@ -1,6 +1,6 @@
 [repository]
-REPOSITORY_NAME = "opencv_flowui_operators"
-VERSION = "0.0.1"
+REPOSITORY_NAME = "template_operators"
+VERSION = "0.1.0"
 
 [dockerhub]
 REGISTRY_NAME = "taufferconsulting"
