@@ -1,0 +1,16 @@
+{
+    "opencv_flowui_operators_flowui_dependency_0": {
+        "dependency": {
+            "docker_image": null,
+            "dockerfile": null,
+            "requirements_file": "requirements_0.txt"
+        },
+        "operators": [
+            "ExampleSimpleOperator"
+        ],
+        "secrets": [
+            "EXAMPLE_OPERATOR_SECRET_1"
+        ],
+        "source_image": "taufferconsulting/opencv_flowui_operators_flowui_dependency_0:0.0.1"
+    }
+}
