@@ -1,8 +1,8 @@
 from flowui.base_operator import BaseOperator
 from .models import InputModel, OutputModel
+import os
 
 import numpy as np
-import os
 
 
 class ExampleSimpleOperator(BaseOperator):

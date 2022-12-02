@@ -1,0 +1,14 @@
+{
+    "name": "ExampleComplexOperator",
+    "description": "This is an example of a complex FlowUI Operator",
+    "dependency": {
+        "dockerfile": "Dockerfile_0.txt"
+    },
+    "tags": [
+        "Example"
+    ],
+    "style": {
+        "node_label": "Complex Operator",
+        "icon_class_name": "fas fa-database"
+    }
+}
