@@ -1,4 +1,76 @@
 {
+    "ExampleComplexOperator": {
+        "name": "ExampleComplexOperator",
+        "dependency": {
+            "docker_image": null,
+            "dockerfile": "Dockerfile_1",
+            "requirements_file": null
+        },
+        "tags": [
+            "Example"
+        ],
+        "style": {
+            "node_label": "Complex Operator",
+            "node_type": "default",
+            "node_style": {
+                "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "icon_class_name": "fas fa-database",
+            "iconStyle": {
+                "cursor": "pointer"
+            }
+        },
+        "description": "This is an example of a complex FlowUI Operator",
+        "input_schema": {
+            "title": "InputModel",
+            "type": "object",
+            "properties": {
+                "arg1": {
+                    "title": "Arg1",
+                    "description": "Distribution mean",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "arg1"
+            ]
+        },
+        "output_schema": {
+            "title": "OutputModel",
+            "type": "object",
+            "properties": {
+                "message": {
+                    "title": "Message",
+                    "description": "Output message to log",
+                    "type": "string"
+                },
+                "result": {
+                    "title": "Result",
+                    "description": "The result of this Operator's processing",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message",
+                "result"
+            ]
+        },
+        "secrets_schema": {
+            "title": "SecretsModel",
+            "type": "object",
+            "properties": {
+                "EXAMPLE_OPERATOR_SECRET_2": {
+                    "title": "Example Operator Secret 2",
+                    "description": "A secret necessary to run this Operator",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "EXAMPLE_OPERATOR_SECRET_2"
+            ]
+        }
+    },
     "ExampleSimpleOperator": {
         "name": "ExampleSimpleOperator",
         "dependency": {
