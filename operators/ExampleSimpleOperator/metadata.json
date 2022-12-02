@@ -1,0 +1,14 @@
+{
+    "name": "ExampleSimpleOperator",
+    "description": "This is an example of a simple FlowUI Operator",
+    "dependency": {
+        "requirements_file": "requirements_0.txt"
+    },
+    "tags": [
+        "Example"
+    ],
+    "style": {
+        "node_label": "Simple Operator",
+        "icon_class_name": "fas fa-database"
+    }
+}
