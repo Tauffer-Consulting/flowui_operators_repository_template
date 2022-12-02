@@ -1,5 +1,19 @@
 {
-    "opencv_flowui_operators_flowui_dependency_0": {
+    "template_operators_flowui_dependency_0": {
+        "dependency": {
+            "docker_image": null,
+            "dockerfile": "Dockerfile_1",
+            "requirements_file": null
+        },
+        "operators": [
+            "ExampleComplexOperator"
+        ],
+        "secrets": [
+            "EXAMPLE_OPERATOR_SECRET_2"
+        ],
+        "source_image": "taufferconsulting/template_operators_flowui_dependency_0:0.1.0"
+    },
+    "template_operators_flowui_dependency_1": {
         "dependency": {
             "docker_image": null,
             "dockerfile": null,
@@ -11,6 +25,6 @@
         "secrets": [
             "EXAMPLE_OPERATOR_SECRET_1"
         ],
-        "source_image": "taufferconsulting/opencv_flowui_operators_flowui_dependency_0:0.0.1"
+        "source_image": "taufferconsulting/template_operators_flowui_dependency_1:0.1.0"
     }
 }
