@@ -2,7 +2,7 @@
     "name": "ExampleComplexOperator",
     "description": "This is an example of a complex FlowUI Operator",
     "dependency": {
-        "dockerfile": "Dockerfile_0.txt"
+        "dockerfile": "Dockerfile_1.txt"
     },
     "tags": [
         "Example"
