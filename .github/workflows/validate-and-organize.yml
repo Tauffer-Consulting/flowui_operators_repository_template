@@ -1,10 +1,9 @@
-name: Validate and organize repo, build and publish Docker images
+name: Validate and organize repo, build, publish Docker images and create a release for the Operator Repository
 
 on:
   push:
     branches:
       - main
-      - dev
 
 jobs:
   validate-and-organize:
@@ -25,11 +24,12 @@ jobs:
         run: |
           python -m pip install -U pip
           pip install --no-cache-dir flowui-project
+
       - name: Run organize, build and publish images
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-        run: flowui organize --build-images --publish-images
+        run: flowui operator organize --build-images --publish-images --dockerhub-username=${{ secrets.DOCKERHUB_USERNAME }} --dockerhub-password=${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Commit files
         run: |
@@ -37,8 +37,15 @@ jobs:
           git config --local user.name "github-actions[bot]"
           GIT_STATUS=$(git status -s)
           [[ ! -z "$GIT_STATUS" ]] && git add .flowui/* && git commit -m "auto-organize" -a || echo "No changes to commit"
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+
+      - name: Create Release
+        env: 
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: flowui operator release
